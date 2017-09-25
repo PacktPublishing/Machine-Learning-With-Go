@@ -1,0 +1,22 @@
+{
+  "pipeline": {
+    "name": "model"
+  },
+  "transform": {
+    "image": "dwhitena/goregtrain:multi",
+    "cmd": [ 
+      "/goregtrain",
+      "-inDir=/pfs/training",
+      "-outDir=/pfs/out"
+    ] 
+  },
+  "parallelism_spec": {
+    "constant": "1"
+  },
+  "input": {
+    "atom": {
+      "repo": "training",
+      "glob": "/"
+    }
+  }
+}
