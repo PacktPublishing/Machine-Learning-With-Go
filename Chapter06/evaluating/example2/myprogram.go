@@ -135,8 +135,9 @@ func main() {
 		// Add to the average silhouette coefficient.
 		if a > b {
 			silhouette += ((b - a) / a) / float64(len(labels))
+		} else {
+			silhouette += ((b - a) / b) / float64(len(labels))
 		}
-		silhouette += ((b - a) / b) / float64(len(labels))
 	}
 
 	// Output the final average silhouette coeffcient to stdout.
