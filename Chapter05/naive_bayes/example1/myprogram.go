@@ -31,7 +31,10 @@ func main() {
 	}
 
 	// Make our predictions.
-	predictions := nb.Predict(convertToBinary(testData))
+	predictions, err := nb.Predict(convertToBinary(testData))
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	// Generate a Confusion Matrix.
 	cm, err := evaluation.GetConfusionMatrix(testData, predictions)
