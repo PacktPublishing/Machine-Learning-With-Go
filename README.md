@@ -37,8 +37,8 @@ A complete Go environment including Go, an editor, and related default or
 custom environment variables defined. You can, for example, follow this guide
 at https://www.goinggo.net/2016/05/installing-go-and-your-workspace.htm
 l.
-Various Go dependencies. These can be obtained as they are needed via go get
-....
+Various Go dependencies. These can be obtained as they are needed via `dep
+ensure -v`
 Then, to run the examples related to some of the advanced topics, such as data pipelining
 and deep learning, you will need a few additional things:
 An installation or deployment of Pachyderm. You can follow these docs to get
